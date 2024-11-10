@@ -23,7 +23,40 @@
       })
       .catch(error => console.error(error));
   </script>
-      <img src="/background-image.jpg" alt="">
+  
+  <div class="background-image">
+  </div>
+  <div class="col-md-12 slider-text">    
+    <body id="login-form">
+      <div class="container">
+        <div class="form-wrapper">
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="new-username">Username:</label>
+              <input type="text" placeholder="Enter Username" id="new-username" name="new-username" required>
+            </div>
+            <div class="form-group">
+              <label for="new-password">Password:</label>
+              <input type="password" placeholder="Enter Password" id="new-password" name="new-password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          Already have an account?
+          <h2>Login</h2>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" placeholder="Enter Username" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" placeholder="Enter Password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>  </div>
       <div class="hero-content">
         <h2>Welcome to Audrine Homes</h2>
         <p>Your destination for finding your dream home.</p>
@@ -62,11 +95,19 @@
   </div>
 </div>
 
+<div id="footer"></div><script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      footer.innerHTML = data;
+    })
+    .catch(error => {
+      footer.innerHTML = 'Error loading footer.';
+      console.error(error);
+    });
+</script>
 
-<footer>
-  <p>&copy; 2024 Audrine Homes. All rights reserved.</p>
-</footer>
-      <script
+  <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
